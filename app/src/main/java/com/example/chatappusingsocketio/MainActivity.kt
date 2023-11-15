@@ -3,7 +3,6 @@ package com.example.chatappusingsocketio
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.chatappusingsocketio.adapter.MessageAdapter
 import com.example.chatappusingsocketio.databinding.ActivityMainBinding
@@ -11,7 +10,6 @@ import com.example.chatappusingsocketio.model.MessageEntity
 import com.example.chatappusingsocketio.model.TypeMessage
 import com.example.chatappusingsocketio.others.Resource
 import com.example.chatappusingsocketio.viewmodel.ChatAppViewModel
-import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
 
@@ -81,9 +79,10 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
             }
-
         }
+
     }
+
 
     override fun onDestroy() {
         super.onDestroy()
